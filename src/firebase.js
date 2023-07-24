@@ -1,6 +1,10 @@
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
+
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_KEY,
+  apiKey: "AIzaSyCM_KUfs1eEtZpP0oUHwN9hP-MDcgld2ak",
   authDomain: "fir-learning-396d9.firebaseapp.com",
   projectId: "fir-learning-396d9",
   storageBucket: "fir-learning-396d9.appspot.com",
@@ -9,3 +13,6 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+export const auth = getAuth()
+export const db = getFirestore(app);
+export const storage = getStorage(app);
